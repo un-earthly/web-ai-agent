@@ -6,7 +6,6 @@ import { FloatingFeatures } from "./floating-features"
 import { RoboAnimation } from "./robo-animation"
 import { useState, useEffect, memo } from "react"
 
-// Separate animated text component
 const AnimatedText = memo(({ text }) => (
   <motion.div
     key={text}
@@ -14,7 +13,7 @@ const AnimatedText = memo(({ text }) => (
     animate={{ y: "0%" }}
     exit={{ y: "-100%" }}
     transition={{ duration: 1, ease: "easeInOut" }}>
-    <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 inline-block">
+    <span className="text-transparent w-full h-auto bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 inline-block">
       {text}
     </span>
   </motion.div>
@@ -35,14 +34,13 @@ const ActionButtons = memo(() => (
     <Button
       size="lg"
       variant="outline"
-      className="text-white border-purple-500 hover:bg-purple-500/20 w-full sm:w-auto">
+      className="text-white border-purple-500 bg-transparent hover:bg-purple-500/20 hover:text-purple-400 w-full sm:w-auto">
       <Sparkles className="mr-2 h-5 w-5" />
       See Examples
     </Button>
   </motion.div>
 ));
 
-// Memoized floating features
 const MemoizedFloatingFeatures = memo(() => (
   <div className="absolute inset-0 overflow-hidden">
     <FloatingFeatures count={5} />

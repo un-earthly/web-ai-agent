@@ -57,7 +57,7 @@ export function FloatingFeatures({ count = 5 }) {
             <div
               className="relative w-20 h-24 bg-white/5 backdrop-blur-sm rounded-lg border border-stone-200 border-white/10 flex flex-col items-center justify-center transform hover:scale-110 transition-transform duration-300 dark:border-stone-800">
               <Feature.icon className={`w-10 h-10 ${Feature.color}`} />
-              <span className="text-xs text-white/70 mt-2">{Feature.name}</span>
+              <span className="text-xs text-white/70 text-center mt-2">{Feature.name}</span>
             </div>
           </motion.div>)
         );
